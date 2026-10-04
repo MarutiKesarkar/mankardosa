@@ -459,5 +459,73 @@ const translations = {
     "menuMessage": {
         "en": "Hello, I'd like to enquire about your menu.",
         "mr": "नमस्कार, मला तुमच्या मेनूबद्दल चौकशी करायची आहे."
+    },
+    "navDelivery": {
+        "en": "Delivery",
+        "mr": "घरपोच सेवा"
+    },
+    "deliveryEyebrow": {
+        "en": "HOME DELIVERY",
+        "mr": "घरपोच सेवा"
+    },
+    "deliveryHeading": {
+        "en": "Your favourites.",
+        "mr": "तुमचे आवडते पदार्थ."
+    },
+    "deliveryDoorstep": {
+        "en": "At your doorstep.",
+        "mr": "आता तुमच्या घरी."
+    },
+    "deliveryDescription": {
+        "en": "Enjoy Mankar Dosa from the comfort of home. Order from our Adhinath, Satara Road outlet through Zomato or Swiggy, or call us to enquire.",
+        "mr": "घरबसल्या माणकर डोसाच्या चवीचा आस्वाद घ्या. आदिनाथ, सातारा रोड येथील आमच्या दुकानातून झोमॅटो किंवा स्विगीवर ऑर्डर करा, किंवा चौकशीसाठी आम्हाला फोन करा."
+    },
+    "deliveryHoursLabel": {
+        "en": "Opening hours",
+        "mr": "दुकानाची वेळ"
+    },
+    "deliveryHours": {
+        "en": "11:00 AM – 10:30 PM",
+        "mr": "सकाळी ११:०० – रात्री १०:३०"
+    },
+    "deliveryLocationLabel": {
+        "en": "Our outlet",
+        "mr": "आमचे दुकान"
+    },
+    "deliveryLocation": {
+        "en": "Adhinath, Satara Road, Pune",
+        "mr": "आदिनाथ, सातारा रोड, पुणे"
+    },
+    "deliveryPlatformsLabel": {
+        "en": "Find us on",
+        "mr": "येथे ऑर्डर करा"
+    },
+    "deliveryZomato": {
+        "en": "Zomato",
+        "mr": "झोमॅटो"
+    },
+    "deliverySwiggy": {
+        "en": "Swiggy",
+        "mr": "स्विगी"
+    },
+    "deliveryPlatformHelp": {
+        "en": "Search for Mankar Dosa, Adhinath / Satara Road in your delivery app.",
+        "mr": "तुमच्या डिलिव्हरी ॲपमध्ये माणकर डोसा, आदिनाथ / सातारा रोड असे शोधा."
+    },
+    "deliveryCall": {
+        "en": "Call for orders & enquiries",
+        "mr": "ऑर्डर आणि चौकशीसाठी फोन करा"
+    },
+    "deliveryDirections": {
+        "en": "Find our Satara Road outlet ↗",
+        "mr": "सातारा रोडवरील दुकानाचा पत्ता पाहा ↗"
+    },
+    "deliveryPosterAlt": {
+        "en": "Mankar Dosa home-delivery poster for the Adhinath, Satara Road outlet, with Zomato, Swiggy, opening hours and contact numbers.",
+        "mr": "आदिनाथ, सातारा रोड येथील माणकर डोसाच्या घरपोच सेवेचे पोस्टर: झोमॅटो, स्विगी, दुकानाची वेळ आणि संपर्क क्रमांक."
+    },
+    "deliveryPosterCaption": {
+        "en": "The original Mankar taste, ready to enjoy at home.",
+        "mr": "माणकरांची मूळ चव, आता घरबसल्या अनुभवण्यासाठी."
     }
 };
