@@ -1,0 +1,31 @@
+@import "tailwindcss" source(none);
+@source "../index.html";
+@source "../script.js";
+
+@theme {
+  --font-sans: "DM Sans", sans-serif;
+  --font-display: "Playfair Display", Georgia, serif;
+  --color-brand-red: #b82e24;
+  --color-brand-green: #537137;
+  --color-ink: #242922;
+  --color-cream: #faf7ee;
+  --color-line: #e2e4db;
+  --breakpoint-md: 761px;
+  --breakpoint-lg: 1001px;
+  --breakpoint-wide: 1500px;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-enter: enter 0.9s both;
+  --animate-marquee: marquee 32s linear infinite;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0) rotate(-12deg); }
+    50% { transform: translateY(-12px) rotate(-10deg); }
+  }
+  @keyframes enter {
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes marquee {
+    to { transform: translateX(-50%); }
+  }
+}
