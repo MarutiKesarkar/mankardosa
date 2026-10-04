@@ -519,5 +519,9 @@ const translations = {
     "deliveryDirections": {
         "en": "Find our Satara Road outlet ↗",
         "mr": "सातारा रोडवरील दुकानाचा पत्ता पाहा ↗"
+    },
+    "deliveryBannerAlt": {
+        "en": "Mankar Dosa home delivery: Adhinath, Satara Road, Pune; 11 AM to 10:30 PM; available on Zomato and Swiggy; call 7774979797 or 9850272711.",
+        "mr": "माणकर डोसा घरपोच सेवा: आदिनाथ, सातारा रोड, पुणे; सकाळी ११ ते रात्री १०:३०; झोमॅटो आणि स्विगीवर उपलब्ध; संपर्क 7774979797 किंवा 9850272711."
     }
 };
