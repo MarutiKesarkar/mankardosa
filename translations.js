@@ -519,13 +519,5 @@ const translations = {
     "deliveryDirections": {
         "en": "Find our Satara Road outlet ↗",
         "mr": "सातारा रोडवरील दुकानाचा पत्ता पाहा ↗"
-    },
-    "deliveryPosterAlt": {
-        "en": "Mankar Dosa home-delivery poster for the Adhinath, Satara Road outlet, with Zomato, Swiggy, opening hours and contact numbers.",
-        "mr": "आदिनाथ, सातारा रोड येथील माणकर डोसाच्या घरपोच सेवेचे पोस्टर: झोमॅटो, स्विगी, दुकानाची वेळ आणि संपर्क क्रमांक."
-    },
-    "deliveryPosterCaption": {
-        "en": "The original Mankar taste, ready to enjoy at home.",
-        "mr": "माणकरांची मूळ चव, आता घरबसल्या अनुभवण्यासाठी."
     }
 };
