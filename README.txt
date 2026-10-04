@@ -29,3 +29,5 @@ The English / मराठी buttons switch all website copy without reloading.
 translations.js contains the English and Marathi text, image descriptions,
 gallery captions and accessibility labels. The visitor's choice is saved in
 browser storage when available. Phone numbers remain the same in both languages.
+Marathi text uses Playpen Sans Deva, matching the reference website's handwritten
+font. Google Fonts supplies it, with Noto Sans Devanagari and system fallbacks.
