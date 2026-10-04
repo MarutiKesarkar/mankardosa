@@ -3,8 +3,8 @@
 @source "../script.js";
 
 @theme {
-  --font-sans: "DM Sans", sans-serif;
-  --font-display: "Playfair Display", Georgia, serif;
+  --font-sans: "DM Sans", "Noto Sans Devanagari", sans-serif;
+  --font-display: "Playfair Display", "Noto Serif Devanagari", Georgia, serif;
   --color-brand-red: #b82e24;
   --color-brand-green: #537137;
   --color-ink: #242922;

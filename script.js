@@ -1,3 +1,48 @@
+let currentLanguage = 'en';
+let activeGalleryButton = null;
+
+function translate(key) {
+    return translations[key][currentLanguage];
+}
+
+function updateLightbox() {
+    if (!activeGalleryButton) return;
+    dialog.querySelector('img').src = activeGalleryButton.dataset.image;
+    dialog.querySelector('img').alt = activeGalleryButton.querySelector('img').alt;
+    dialog.querySelector('p').textContent = activeGalleryButton.dataset.title;
+}
+
+function setLanguage(language) {
+    currentLanguage = language === 'mr' ? 'mr' : 'en';
+    document.documentElement.lang = currentLanguage;
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+        element.textContent = translate(element.dataset.i18n);
+    });
+    ['alt', 'aria-label', 'data-title', 'content'].forEach(attribute => {
+        document.querySelectorAll(`[data-i18n-${attribute}]`).forEach(element => {
+            element.setAttribute(attribute, translate(element.getAttribute(`data-i18n-${attribute}`)));
+        });
+    });
+    document.querySelectorAll('[data-language]').forEach(button => {
+        button.setAttribute('aria-pressed', String(button.dataset.language === currentLanguage));
+    });
+    toggle.setAttribute('aria-label', translate(toggle.getAttribute('aria-expanded') === 'true' ? 'navClose' : 'navOpen'));
+    document.querySelectorAll('[data-menu-enquiry]').forEach(link => {
+        const url = new URL(link.href);
+        url.searchParams.set('text', translate('menuMessage'));
+        link.href = url.href;
+    });
+    document.querySelector('#year').textContent = new Intl.NumberFormat(currentLanguage, {
+        useGrouping: false
+    }).format(new Date().getFullYear());
+    updateLightbox();
+    try {
+        localStorage.setItem('mankar-dosa-language', currentLanguage);
+    } catch {
+        // Switching still works when browser storage is unavailable.
+    }
+}
+
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 const revealElements = document.querySelectorAll('[data-reveal]');
 
@@ -35,7 +80,7 @@ function setMenuOpen(open) {
     nav.classList.toggle('hidden', !open);
     nav.classList.toggle('flex', open);
     toggle.setAttribute('aria-expanded', String(open));
-    toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    toggle.setAttribute('aria-label', translate(open ? 'navClose' : 'navOpen'));
 }
 
 toggle.addEventListener('click', () => {
@@ -69,9 +114,8 @@ filterButtons.forEach(button => {
 const dialog = document.querySelector('#lightbox');
 document.querySelectorAll('[data-image]').forEach(button => {
     button.addEventListener('click', () => {
-        dialog.querySelector('img').src = button.dataset.image;
-        dialog.querySelector('img').alt = button.querySelector('img').alt;
-        dialog.querySelector('p').textContent = button.dataset.title;
+        activeGalleryButton = button;
+        updateLightbox();
         dialog.showModal();
     });
 });
@@ -85,4 +129,13 @@ dialog.addEventListener('click', event => {
         }
     }
 });
-document.querySelector('#year').textContent = new Date().getFullYear();
+document.querySelectorAll('[data-language]').forEach(button => {
+    button.addEventListener('click', () => setLanguage(button.dataset.language));
+});
+let savedLanguage = 'en';
+try {
+    savedLanguage = localStorage.getItem('mankar-dosa-language') || 'en';
+} catch {
+    // Use English initially when browser storage is unavailable.
+}
+setLanguage(savedLanguage);
