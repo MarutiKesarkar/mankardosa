@@ -22,6 +22,8 @@ GitHub Pages: https://marutikesarkar.github.io/mankardosa/
 Pages publishes the root folder of the main branch. After editing Tailwind
 classes, run npm run build and commit style.css before pushing to main.
 .nojekyll keeps GitHub Pages serving these files as a plain static website.
+The build also versions local CSS and JavaScript URLs by their contents so
+returning visitors load current assets instead of older cached files.
 
 The English / मराठी buttons switch all website copy without reloading.
 translations.js contains the English and Marathi text, image descriptions,
