@@ -17,3 +17,8 @@ To change the design:
 3. Run npm run build to regenerate style.css, or npm run dev to watch changes.
 
 Only the theme and custom animation keyframes are handwritten CSS.
+
+GitHub Pages: https://marutikesarkar.github.io/mankardosa/
+Pages publishes the root folder of the main branch. After editing Tailwind
+classes, run npm run build and commit style.css before pushing to main.
+.nojekyll keeps GitHub Pages serving these files as a plain static website.
